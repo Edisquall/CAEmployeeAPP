@@ -49,7 +49,7 @@ public class Employee {
     }
 
     //validating email
-    public void validateEmail(String email) {
+    public void setEmail(String email) {
         if (email.length() > 3) {
             this.email = email;
         } else {
