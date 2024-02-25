@@ -35,7 +35,13 @@ public class Employee {
    public static int getNextEmpNum() {
        return nextEmpNum;
    }
-    
+   //validating email
+    public void validateEmail (String email) {
+        if (email.length() >3) {
+            this.email = email;
+        } else {
+            System.out.println("Email must contain 3 or more characters.");
+        }
         
     }
 }
