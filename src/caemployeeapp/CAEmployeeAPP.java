@@ -27,6 +27,13 @@ public class CAEmployeeAPP {
         
         System.out.println("Value of NextEmpNum: " +Employee.getNextEmpNum());
         
+        //Displaying name of each employee
+        
+        int m = 1;
+        System.out.println("Here it is all the employees with the empNUm above " + m + ":");
+        if (Employee.getEmpNum()> m) {
+            System.out.println(eEmployee.getName());
+        }
     }
     
 }
