@@ -18,8 +18,16 @@ public class Company {
 
     public Company() {
         this.companyName = "Default Company";
-        this.staff = "Default Staff";
+        this.staff = new ArrayList<>();
     }
-    
+    // Constructor with name values as a parameter
+    public Company(String companyName, ArrayList<String> staff) {
+        this.companyName = companyName;
+        this.staff = new ArrayList<>();
+    }
+    //Add new staff
+    public void addNewStaff(){
+        staff.add();
+    }
     
 }
