@@ -8,6 +8,6 @@ package caemployeeapp;
  *
  * @author Edi
  */
-public class EmployeeTest {
+public class ConsoleManager {
     
 }

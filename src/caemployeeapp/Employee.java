@@ -55,6 +55,7 @@ public class Employee {
         } else {
             System.out.println("Email must contain 3 or more characters.");
         }
-
     }
 }
+ 
+   
