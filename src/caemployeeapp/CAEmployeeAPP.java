@@ -20,6 +20,13 @@ public class CAEmployeeAPP {
         Employee employee2 = new Employee("Ann Banana", "ab@gmail.com");
         Employee employee3 = new Employee("Tom Thumb", "tt@gmail.com");
         
+        //Array for employee
+        Employee[] projectgroup = {employee1, employee2, employee3};
+        
+        //Priting value of nextEmpNum
+        
+        System.out.println("Value of NextEmpNum: " +Employee.getNextEmpNum());
+        
     }
     
 }
