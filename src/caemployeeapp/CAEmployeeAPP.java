@@ -4,6 +4,8 @@
  */
 package caemployeeapp;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Edi
@@ -34,6 +36,74 @@ public class CAEmployeeAPP {
                 System.out.println(empLoop.getName());
             }
         }
-    }
+      // Menu System
+      // Create an instance of EmpManager
+        EmpManager manager = new EmpManager();
+        
+        
+         // Set the manager's username and password
+        manager.setUsername("Gnomeo");
+        manager.setPassword("smurf");
+        
+         // Scanner for user input
+        Scanner scanner = new Scanner(System.in);
 
+       // Login loop
+        boolean loggedIn = false;
+        while (!loggedIn) {
+            System.out.println("Enter username:");
+            String username = scanner.nextLine();
+            System.out.println("Enter password:");
+            String password = scanner.nextLine();
+
+            if (manager.getUsername().equals(username) && manager.getPassword().equals(password)) {
+                loggedIn = true;
+                System.out.println("Login successful!");
+            } else {
+                System.out.println("Invalid username or password. Please try again.");
+            }
+        }
+
+        // Display menu options
+        System.out.println("Menu:");
+        System.out.println("1. View current staff");
+        System.out.println("2. Add new staff");
+        System.out.println("3. Exit");
+
+        // Process user input
+        boolean exit = false;
+        while (!exit) {
+            System.out.println("Enter your choice:");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline character
+            
+            switch (choice) {
+                case 1:
+                    // View current staff
+                    for (Employee empLoop : projectGroup) {
+                        System.out.println(empLoop.getName());
+                    }
+                    break;
+                case 2:
+                    // Add new staff
+                    System.out.println("Enter name of the new employee:");
+                    String name = scanner.nextLine();
+                    System.out.println("Enter email of the new employee:");
+                    String email = scanner.nextLine();
+                    Employee newEmployee = new Employee(name, email);
+                    manager.addNewStaff(newEmployee);
+                    System.out.println("New employee added successfully!");
+                    break;
+                case 3:
+                    // Exit
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a number between 1 and 3.");
+            }
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
 }

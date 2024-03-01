@@ -4,6 +4,8 @@
  */
 package caemployeeapp;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Edi
@@ -12,10 +14,9 @@ public class EmpManager {
     // Info from designed manager
     private String Name;
     private String email;
-    private int empNum;
     private String username;
     private String password;
-
+    private ArrayList<Employee> staff;
     //Getter and Setter for username and password.
     
     public String getUsername() {
@@ -34,5 +35,9 @@ public class EmpManager {
         this.password = password;
     }
     
-    
+     // Method to add new staff
+    public void addNewStaff(Employee employee) {
+        staff.add(employee);
+    }
+
 }
